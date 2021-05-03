@@ -1,0 +1,29 @@
+.fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0,0,0,0.7);
+}
+.ctnModal {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+.ctnModal p{
+    margin: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-align: justify;
+}
