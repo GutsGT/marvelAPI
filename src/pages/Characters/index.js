@@ -15,22 +15,11 @@ export default function Characters() {
   */
   useEffect(() => {
 
-    
-    const ts = "1619431864";
-    const apikey = "9782305b0a915ba58c03ebeb809e9374";
-    const md5 = "52c529302a3ff8129758872dbe5afc1a";
-
     const page = document.URL.substring(22) === ""? "characters":document.URL.substring(22);
+    console.log(page);
 
-    fetch(`https://gateway.marvel.com/v1/public/${page}?ts=${ts}&apikey=${apikey}&hash=${md5}&limit=12`)
+    fetch(`https://gateway.marvel.com/v1/public/${page}?ts=1619431864&apikey=9782305b0a915ba58c03ebeb809e9374&hash=52c529302a3ff8129758872dbe5afc1a&limit=12`)
       .then(response => response.json()).then((data) => {
-
-        /*
-        const results = data.filter(result =>
-          result.toLowerCase().includes(searchTerm)
-        );
-        setSearchResults(results);
-        */
 
         const resultsDiv = document.querySelector('#resultsDiv');
 

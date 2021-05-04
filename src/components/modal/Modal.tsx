@@ -6,7 +6,7 @@ export function Modal(){
         <div className={styles.fade} id="modal">
             <div className={styles.ctnModal} id="modalContent">
                 <p id="description"></p>
-                <div id="maps"></div>
+                <div id="maps" className={styles.maps}></div>
             </div>
         </div>
     )

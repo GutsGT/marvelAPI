@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 
 import styles from '../styles.module.css';
@@ -30,16 +31,20 @@ export default function Characters() {
 
               document.querySelector("#description").textContent = description;
 
-              
-
               // Create the script tag, set the appropriate attributes
               var script = document.createElement('script');
               script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB8VKlqIydR6c3NsRn_JW8voUjTxroQ7H4&callback=initMap';
               script.async = true;
+              script.id = "mapsScript";
 
               // Attach your callback function to the `window` object
               window.initMap = function() {
-                // JS API is loaded and available
+                const google = window.google;
+                new google.maps.Map(document.getElementById('maps'), {
+                  center: {lat: -34.397, lng: 150.644},
+                  zoom: 15
+                });
+    
               };
 
               // Append the 'script' element to 'head'
