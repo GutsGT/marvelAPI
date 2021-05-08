@@ -89,12 +89,6 @@
 
 /* Always set the map height explicitly to define the size of the div
 * element that contains the map. */
-.maps {
-    height: 100px;
-    width: 100px;
-    margin: 0;
-    padding: 0;
-}      
 
 @media(max-width:1366px){
     .contentCard{

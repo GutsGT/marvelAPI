@@ -1,4 +1,4 @@
-.fade {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,9 @@
 .ctnModal {
   width: 50%;
   height: auto;
+  max-height: 100%;
   display: flex;
+  overflow: auto;
   flex-direction: column;
   background: white;
   border-radius: 50px;
@@ -26,4 +28,15 @@
     font-family:Arial, Helvetica, sans-serif;
     font-size: 25px;
     text-align: justify;
+
+    border-width: 10px;
+    border-color: black;
 }
+
+.maps {
+  position: relative;
+  height: 500px;
+  margin: 0 5% 2% 5%;
+  padding: 10;
+  border-radius: 20px;
+}      

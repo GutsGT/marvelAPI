@@ -13,7 +13,7 @@ export default function Characters() {
 
     const page = document.URL.substring(22) === ""? "characters":document.URL.substring(22);
 
-    fetch(`https://gateway.marvel.com/v1/public/${page}?ts=${ts}&apikey=${apikey}&hash=${md5}&limit=9`)
+    fetch(`https://gateway.marvel.com/v1/public/${page}?ts=${ts}&apikey=${apikey}&hash=${md5}&limit=12`)
       .then(response => response.json()).then((data) => {
 
         const resultsDiv = document.querySelector('#resultsDiv');
@@ -92,9 +92,22 @@ export default function Characters() {
             };
 
             /*modal config */
-            document.querySelector("#modal").onclick = function(){
-              document.querySelector("#modal").style.display = "none";
+
+            let modalContentClick;
+
+            document.querySelector("#modalContent").onclick = function(){
+              modalContentClick = true;
             };
+            document.querySelector("#modal").onclick = function(){
+              if(modalContentClick === false){
+                document.querySelector("#modal").style.display = "none";
+              }else{
+                modalContentClick = false;
+              }
+              
+            };
+            
+            
             /*
             const description = result.id;
             document.querySelector("#modalParagraph").textContent = description;
